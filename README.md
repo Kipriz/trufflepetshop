@@ -2,7 +2,7 @@ Completed Truffle's PetShop tutorial with Truffle 4.
 
 The original tutorial does not work at the end because Solidity (or web3) needs that getAdopters() methods to have at 1 least 1 argument.
 It looks to be connected to the fact that getAdopters() methods return an array not a primitive. 
-After following the original tutorial I gor 'Invalid number of parameters' error in browser's log.
+After following the original tutorial I gor 'Invalid number of arguments' error in browser's log.
 
 How to run and play.
 * install testrpc
