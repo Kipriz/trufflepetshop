@@ -58,7 +58,7 @@ App = {
         App.contracts.Adoption.deployed().then(function (instance) {
             adoptionInstance = instance;
 
-            return adoptionInstance.getAdopters.call();
+            return adoptionInstance.getAllAdopters.call(123);
         }).then(function (adopters) {
             for (i = 0; i < adopters.length; i++) {
                 if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
@@ -68,6 +68,15 @@ App = {
         }).catch(function (err) {
             console.log(err.message);
         });
+
+        App.contracts.Adoption.deployed().then(function(instance) {
+            adoptionInstance = instance;
+            return adoptionInstance.getNumber.call();
+        }).then(function (number) {
+            console.log(number);
+        }).catch(function(err) {
+            console.log(err.message);
+        })
     },
 
     handleAdopt: function () {
